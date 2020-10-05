@@ -1,0 +1,45 @@
+{% block content %}
+{% load static %}
+<br><br><br>
+<h5>Let’s start with our Wifi Hacking Technique!<h5><br>
+<h4><u>Wireless Network we can encounter:</u></h4>
+
+1. WPA2 PSK (Personal)<br>
+2. WPA2 Enterprise<br><br>
+Here we are attacking WPA2 PSK (Pre Shared Key) which is basically called personal network or small level network or Medium level network than Enterprise.<br><br>
+<h4><u>Steps/Phases for attack WPA2 PSK:</u></h4>
+<img src="{% static '/img/post1/1.png' %}"  alt="noimg" height="300" width="300" class="card-img-top">
+<h5>Step 1-Placing Wireless card into monitor mode.</h5>
+• Killing the current running process using tool airmon-ng .<br><br>
+<img src="{% static '/img/post1/2.png' %}"  alt="noimg" height="200" width="200" class="card-img-top"><br><br>
+• Starting wifi in monitor mode.<br><br>
+<img src="{% static '/img/post1/3.png' %}"  alt="noimg" height="200" width="200" class="card-img-top"><br><br>
+<h5>
+Step 2 – Discover information about the network.</h5>
+• By using airodump-ng for wifi in monitor mode using command<br>
+==>airodump-ng wlan0mon<br>
+• Note down the BSSID and channel no. of ESSID-”Info Tech”.<br>
+• BSSID is nothing, its only as MAC address to identify the device.<br><br>
+<img src="{% static '/img/post1/4.png' %}"  alt="noimg" height="500" width="400" class="card-img-top"><br><br>
+<h5>Step 3- Select the network and capture data.</h5>
+• Use this command to capture particular network.<br>
+==>airodump-ng -c 11 --bssid D8:32:E3:25:8C:6D -w capture wlan0mon<br>
+• Here -c is for channel and -w is for output file.<br><br>
+<img src="{% static '/img/post1/5.png' %}"  alt="noimg" height="400" width="400" class="card-img-top"><br><br>
+<h5>Step 4- Perform Deauth Attack.</h5>
+• To generate Traffic and start more data flow over the network using the tool called aireplay-ng.<br><br>
+<img src="{% static '/img/post1/6.png' %}"  alt="noimg" height="100" width="200" class="card-img-top"><br><br>
+• Here -0 is to set deauth attack and 1 for setting up thread for the one time.<br><br>
+<img src="{% static '/img/post1/7.png' %}"  alt="noimg" height="500" width="200" class="card-img-top"><br><br>
+<h5>Step 5- Capture WPA handshake.</h5>
+• This is basically four way handshake to get wireless password as hashes.<br><br>
+<img src="{% static '/img/post1/8.png' %}"  alt="noimg" height="200" width="200" class="card-img-top"><br><br>
+<h5>Step 6- Attempt to crack the handshake.</h5>
+• We can use any tool to crack but here we are using aircrack-ng.<br>
+• We are using rockyou.txt provided by kali linux inbuilt for bruteforcing .<br><br>
+<img src="{% static '/img/post1/9.png' %}"  alt="noimg" height="100" width="200" class="card-img-top">
+<img src="{% static '/img/post1/10.png' %}"  alt="noimg" height="500" width="200" class="card-img-top"><br><br>
+Hurray, So we got the password as “aggarwal” for “Info Tech” is wifi network of my neighbour.<br><br>
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'blogs.html'%}
+{% block content %}
+<h1 class="blog section-title">Blogs</h1>
+<div class="row" style="width: 80rem;">
+	{% for i in object_list %}
+	<div class = "col-6">
+	<div class="blog-item">
+		<figure>
+	{% if i.img %}
+
+  <a href="{% url 'shoot_to_root:post-detail' i.id %}"><img src="{{i.img.url}}"  alt="noimg" height="300" width="300" class="card-img-top"></a>
+  {% endif %}
+  </figure>
+  <figcaption>
+  <div class="info">
+    <h5><a id="h_id" href="{% url 'shoot_to_root:post-detail' i.id %}"><h5>{{i.title}}</h5></a></h5>
+    <p class="info">{{i.description}}</p>
+      <p><small class="text-muted">Last updated {{i.timestamp}}</small></p>
+  </div>
+  </figcaption>
+</div>
+</div>
+  {% endfor %}
+</div>
+{% endblock %}

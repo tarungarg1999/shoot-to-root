@@ -1,0 +1,25 @@
+{% extends 'blogs.html' %}
+{% block content %}
+<center><u><h1 id= "h_id">{{object.title}}</h1></u></center><br>
+<img src="{{object.img.url}}"  alt="noimg" height="500" width="300" class="card-img-top">
+{% if object.index == 1 %}
+{% include 'post1.html' %}
+{% endif %}
+{% if object.index == 2 %}
+{% include 'post2.html' %}
+{% endif %}
+<!--
+<p id="btext">{{object.description}}</p><br><br>-->
+
+<p><small class="text-muted">Published on {{object.timestamp}}</small></p>
+<form action="/comment" class="contact-form" method="post">
+           {% csrf_token %}
+        
+<div class="form-group">
+              <textarea class="form-control textarea-contact" rows="5" id="comment" name="comment" placeholder="Type Your Comment/Feedback here..." required=""></textarea>
+              <br>
+               <button class="btn btn-default btn-send"> <i class="fa fa-send"></i> &nbsp; Comment </button>
+               
+            </div>
+        </form> 
+{%endblock %}

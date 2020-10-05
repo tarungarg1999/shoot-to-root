@@ -1,0 +1,56 @@
+{% block content %}
+{% load static %}
+<br><br><br>
+<h5>Let’s start with our Kali Linux Installation!</h5><br>
+<h4><u>How to install Kali Linux?</u></h4>
+
+Kali Linux installation is a fairly simple process and you have multiple installation options. Most preferred ones include:<br><br>
+
+    1.Installing Kali Linux by making a Kali (linux) bootable USB drive<br>
+    2.Kali Linux hard disk install<br>
+    3.Using virtualization software, such as VMware or VirtualBox<br>
+    4.Dual booting Kali Linux with the operating system<br><br>
+
+While you have multiple options to choose from, in this article, we will learn how to install Kali Linux using virtualization software. Following are the below-stated steps, you can set up your machine with all the tools you need to perform a comprehensive penetration test.<br><br>
+<h4><u>INSTALLATION REQUIREMENTS</u></h4>
+
+    •Minimum 20 GB of free space in your hard drive is recommended.<br>
+    •At least 4 GB of ram is recommended when using VMware or VirtualBox<br>
+    •CD-DVD Drive / USB Support<br><br>
+
+Getting Started with Installation<br><br>
+<h5>Step 1: Install VMware</h5>
+In order to run Kali Linux, we will need some sort of virtualization software first. While there are many options to choose from, such as Oracle’s VirtualBox, I prefer using VMware. Once the installation is done, launch VMware from your applications folder.<br><br>
+<h5>Step 2: Download Kali Linux and check image integrity</h5>
+To download Kali Linux you can go to the official download page and select the one that best suits your needs from there. In addition, on the download page, you will find a bunch of hexadecimal numbers. And those are not there for fun. Kali Linux is intended to be used for security-related tasks. So, you need to check the integrity of the image you download.<br><br>
+<h5>Step 3: Launch  a new virtual machine</h5>
+On VMware Workstation Pro homepage, click on create a new virtual machine, choose the Kali Linux iso file, select the guest operating system and configure virtual machine details (here, Kali Linux). Start the virtual machine by selecting the Kali Linux VM, and then clicking on the green “Power On”  button. <br><br>
+
+<h4><u>INSTALLATION PROCEDURE</u></h4>
+
+<b>Step 1:</b> Once the machine is powered up, you will be prompted to select your preferred installation mode in the GRUB menu. Select graphical install and continue.<br><br>
+<img src="{% static '/img/post2/1.png' %}"  alt="noimg" height="500" width="300" class="card-img-top"><br><br>
+<b>Step 2:</b>  Next couple of screens will ask you to select locale information such as your preferred <b>language</b>, your country location and, keyboard layout.<br><br>
+<img src="{% static '/img/post2/2.png' %}"  alt="noimg" height="600" width="300" class="card-img-top"><br><br>
+<b>Step 3:</b> Once through the local information, the loader will automatically install some additional components and configure your network related settings. Then the installer will prompt for a <b>hostname</b> and <b>domain</b> for this installation. Provide appropriate information for the environment and continue installing.<br><br>
+<img src="{% static '/img/post2/3.png' %}"  alt="noimg" height="600" width="300" class="card-img-top"><br><br>
+<b>Step 4:</b> Set a password for your Kali Linux machine and hit continue. <b>DO NOT FORGET THIS PASSWORD</b>.<br><br>
+<img src="{% static '/img/post2/4.png' %}"  alt="noimg" height="600" width="300" class="card-img-top"><br><br>
+<b>Step 5:</b> After the password is set, the installer will prompt you to set the time zone and then pauses at the disk partitioning. The installer will now provide you four choices about the partitions of the disk. The easiest option for you is to use <b>‘Guided – Use Entire Disk’</b>. Experienced users can use the “Manual” partitioning method for more granular configuration options.<br><br>
+<img src="{% static '/img/post2/5.png' %}"  alt="noimg" height="600" width="300" class="card-img-top"><br><br>
+<b>Step 6:</b> Select the partitioning disk (the recommended option is all files in one partition for new users) & then hit on continue.<br><br>
+<img src="{% static '/img/post2/6.png' %}"  alt="noimg" height="600" width="300" class="card-img-top"><br><br>
+<b>Step 7:</b> Confirm all changes to be made to the disk on the host machine. Be aware that if you continue it will <b>ERASE DATA ON THE DISK</b>.<br><br>
+<img src="{% static '/img/post2/7.png' %}"  alt="noimg" height="600" width="300" class="card-img-top"><br><br>
+On you confirm the partition changes, the installer will run through the process of installing the files. Let it install the system automatically, this may take a while…<br><br>
+
+<b>Step 8:</b> Once the necessary files are installed, system will ask you if you want to set up a network mirror to obtain future pieces of software and updates. Be sure to enable this functionality if you wish to use the Kali repositories.<br><br>
+<img src="{% static '/img/post2/8.png' %}"  alt="noimg" height="600" width="300" class="card-img-top"><br><br>
+Let it configure the package manager related files then…<br><br>
+
+<b>Step 9:</b> Next you will be asked to install the GRUB boot loader. Select ‘Yes’ and pick the device to write the necessary boot loader information to the hard drive which is required to boot Kali.<br><br>
+<img src="{% static '/img/post2/9.png' %}"  alt="noimg" height="600" width="300" class="card-img-top"><br><br>
+<b>Step 10:</b> Once the installer finishes installing GRUB to the disk, click on continue to finish the installation, it will install some final stage files.<br><br>
+<img src="{% static '/img/post2/10.png' %}"  alt="noimg" height="600" width="300" class="card-img-top"><br><br>
+By this point, Kali would be successfully installed and you would be ready to begin your journey exploring Kali Linux!<br><br>
+{% endblock %}

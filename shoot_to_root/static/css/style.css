@@ -273,6 +273,22 @@ ol {
   padding-bottom: 100px;
   border-radius: 80px;
 }
+.blog-section-new {
+  margin-top: 0vh;
+  margin-bottom: 5vh;
+  margin-right: 10vw;
+  margin-left: 0vw;
+}
+.blog-vision-heading {
+  text-align: center;
+  font-family: "Quantico", sans-serif;
+  font-size: 50px;
+  align-self: center;
+  width: fit-content;
+  border-bottom: 3px solid cyan;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .section-title {
   position: relative;

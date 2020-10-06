@@ -19,3 +19,13 @@ class Post(models.Model):
 
 	def _str_(self):
 		return self.title
+
+class CTF(models.Model):
+	title=models.CharField(max_length=100)
+	index=models.IntegerField(default=0)
+	description=models.TextField()
+	timestamp=models.DateTimeField(default=timezone.now)
+	img=models.ImageField(upload_to='')
+
+	def _str_(self):
+		return self.title

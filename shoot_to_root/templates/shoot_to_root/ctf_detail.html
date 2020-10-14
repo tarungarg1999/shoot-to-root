@@ -1,4 +1,28 @@
 {% extends 'ctfs.html' %}
 {% block content %}
-hello detail
+<center><u><h1 id= "h_id">{{object.title}}</h1></u></center><br>
+<div class="container-md">
+<img src="{{object.img.url}}"  alt="noimg" height="500" width="300" class="card-img-top">
+<p><small class="text-muted">Published on {{object.timestamp}}</small></p>
+<form action="/flag_submit" class="flag-form" method="post">
+	{% csrf_token %}
+        
+<div class="form-group">
+              <input type="text" class="form-control" id="flag" name="flag" placeholder="Enter your flag here..." required="">
+            </div><center>
+               <button class="btn btn-default btn-send" onclick="showResult()"> <i class="fa fa-send"></i> &nbsp; Submit </button></center>
+</form><br>
+   {% if object.index == 10 %}
+        <div id="result-pawn" >
+            <h4 class="result-pawn-style" style="text-align:center;">Well Done, you got the Right flag :)
+            </h4>
+        </div>
+    {% endif %}
+   {% if object.index == 12 %}
+        <div id="result-pawn" >
+            <h4 class="result-pawn-style" style="text-align:center;">Try Again :)
+            </h4>
+            <br>
+        </div>
+    {% endif %}</div>
 {%endblock %}

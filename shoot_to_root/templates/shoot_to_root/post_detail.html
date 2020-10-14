@@ -1,12 +1,15 @@
 {% extends 'blogs.html' %}
 {% block content %}
 <center><u><h1 id= "h_id">{{object.title}}</h1></u></center><br>
-<img src="{{object.img.url}}"  alt="noimg" height="500" width="300" class="card-img-top">
+<div class="container-md">
 {% if object.index == 1 %}
 {% include 'post1.html' %}
 {% endif %}
 {% if object.index == 2 %}
 {% include 'post2.html' %}
+{% endif %}
+{% if object.index == 3 %}
+{% include 'post3.html' %}
 {% endif %}
 <!--
 <p id="btext">{{object.description}}</p><br><br>-->
@@ -20,6 +23,7 @@
               <br>
                <button class="btn btn-default btn-send"> <i class="fa fa-send"></i> &nbsp; Comment </button>
                
+            </div>
             </div>
         </form> 
 {%endblock %}

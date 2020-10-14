@@ -8,9 +8,10 @@ urlpatterns=[
 	path('',views.home,name='homepage'),
 	path('contact', views.contact,name='Contact'),
 	path('comment', views.comment,name='Comment'),
-	path('ctfs.html',CTFList.as_view(),name='CTF-list'),
-	path('detail/<int:pk>/',CTFDetail.as_view(),name='CTF-detail'),
+	path('flag_submit', views.flag,name='flag_submit'),
+	path('ctfs.html',CTFList.as_view(),name='ctf-list'),
+	path('post/<int:pk>/',PostDetail.as_view(),name='post-detail'),
+	path('ctf/<int:pk>/',CTFDetail.as_view(),name='ctf-detail'),
 	path('base.html',views.home,name='homepage'),
-	path('blogs.html',PostList.as_view(),name='post-list'),
-	path('detail/<int:pk>/',PostDetail.as_view(),name='post-detail')
+	path('blogs.html',PostList.as_view(),name='post-list')
 ]

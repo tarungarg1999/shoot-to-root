@@ -1,0 +1,33 @@
+{% block content %}
+{% load static %}
+<center>
+	<iframe height="600" width="300" src="https://www.youtube.com/embed/uP0djTReP8k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="card-img-top"></iframe>
+</center>
+<br><br>
+<h5>Let’s have a look how to create Folder Bomb.</h5><br>
+<h4><u>Writing code using Batch programming</u></h4><br>
+<h6>What is Batch Programming:</h6>
+Batch programming is a programming paradigm that can execute certain commands automatically at the level of an operating system such as DOS or Windows 7 / XP. A batch file is a stack of such commands. If it is retrieved with the command line, the system will execute each task listed in succession. Therefore, the term batch processing is quite common. Batch files are often used to control and configure operating systems, but can also be used for other operations such as server installations. The most famous is probably the Autoexec.bat file that starts the DOS operating system.<br><br>
+Batch programming can be classified as an interpreter-based scripting language. It includes fundamental functions of a programming language, such as IF, IF NOT, or WHILE, but you cannot program applications with it. Since programs with numerous commands are not saved after compilation as an executable file, as is common in applications, batch files rely on a time-oriented translation into machine language. This is done through the Windows command line cmd.exe (under DOS command.com). The batch file, which can be edited with a standard text editor, gets and parses what is there and translates it into binary code<br><br>
+<h6>Writing code in Batch programming:</h6><br>
+<div class="row">
+	<div class="col-12 col-md-12">
+<img src="{% static '/img/post4/11_1.png' %}"  alt="noimg" class="card-img-top"></div></div>
+<b>Here,</b> We used:<br>
+•The command <b>"echo off"</b> turns off the display for the whole script, except for the "echo off" command itself<br>
+•The command <b>":top"</b> is used to set destination label for the goto jumb statement<br>
+•The command <b>"md %random%"</b> is tp make directory with random name.<br>
+•The command <b>"goto top"</b> is used to jump to the above mentioned label.<br><br>
+<h6>Save the file with <b>.bat</b> extension</h6><br>
+<h4><u>Running the file created above</u></h4>
+After executing the above created file, cmd prompt will popup and it start executing jump statement in infinite loop.<br><br>
+<div class="row">
+	<div class="col-12 col-md-12">
+<img src="{% static '/img/post4/11_2.png' %}"  alt="noimg" class="card-img-top"></div></div><br>
+<h5>We have successfully created infinite folders with random name.</h5><br>
+<div class="row">
+	<div class="col-12 col-md-12">
+<img src="{% static '/img/post4/11_3.png' %}"  alt="noimg" class="card-img-top"></div></div><br>
+<h5><u><i>Be aware it may hang your PC if you are using low level specification.</i></u></h5>
+<h5>That's all for today, We reached to the end of this blog, thank you for such a good reader.</h5><br>
+{% endblock %}

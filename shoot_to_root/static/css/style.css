@@ -184,7 +184,7 @@ body {
 /*Footer */
 
 .section-footer {
-    padding: 75px 35px !important;
+    padding: 25px 40px !important;
     background-color: #000000;
 }
 
@@ -223,7 +223,7 @@ ol {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 18px;
+    padding: 10px;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.5);
 }
@@ -246,11 +246,11 @@ ol {
 }
 
 .contact-list {
-    margin-left: 10px;
+    margin-left: 0px;
 }
 
 .footer-about-content {
-    margin-left: 10px;
+    margin-left: 0px;
 }
 
 .nav-list {
@@ -267,7 +267,7 @@ ol {
 }
 
 .path-to-root:hover {
-    margin-left: 8%;
+    margin-left: 0%;
     -webkit-transform: scale(1.2);
     text-shadow: 2px 2px 4px white, 0 0 25px cyan, 0 0 5px cyan;
 }

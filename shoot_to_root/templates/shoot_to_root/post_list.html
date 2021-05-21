@@ -1,34 +1,53 @@
 {% extends 'blogs.html'%}
 {% block content %}
-<section class="blog-section-new">
-    <center>
-    <h1 class="blog-vision-heading my-3">Blogs</h1></center>
-   
-<div class="row mx-0" >
-	{% for i in object_list %}
-	<div class = "col-12 col-sm-6 col-md-4 p p-md-2">
-	<div class="blog-item my-2" style="
-    border:1.5px solid black; border-radius: 10px; 
-  -webkit-box-shadow: 5px 6px 27px -10px rgba(0,0,0,0.75);
-  -moz-box-shadow: 5px 6px 27px -10px rgba(0,0,0,0.75);
-    box-shadow: 5px 6px 27px -10px rgba(0,0,0,0.75);">
-		<figure>
-	{% if i.img %}
-
-  <a href="{% url 'shoot_to_root:post-detail' i.id %}"><img src="{{i.img.url}}"  alt="noimg" height=300px width=100% class="card-img-top"></a>
-  {% endif %}
-  </figure>
-  <figcaption class="p-2">
-  <div >
-    <h5><a id="h_id" href="{% url 'shoot_to_root:post-detail' i.id %}"><h5 style="color: black;">{{i.title}}</h5></a></h5>
-    <p class="black-text">{{i.description}}</p>
-      <p><small class="text-muted">Last updated {{i.timestamp}}</small></p>
-  </div>
-  </figcaption>
-</div>
-</div>
-  {% endfor %}
-</div>
-
-</section>
+<section class="u-clearfix u-custom-color-2 u-section-1" id="sec-f16f">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-text u-text-1">BLOG</h2><!--blog--><!--blog_options_json--><!--{"type":"Recent","source":"","tags":"","count":"","gridProps":[{"mode":"XL","columns":3,"gap":22,"styles":".u-section-1 .u-repeater-1 {grid-auto-rows: [[XL_VALUE]] !important}"},{"mode":"LG","columns":3,"gap":22,"styles":"@media (max-width: 1199px) {.u-section-1 .u-repeater-1 {grid-auto-rows: [[LG_VALUE]] !important}}"},{"mode":"MD","columns":2,"gap":22,"styles":"@media (max-width: 991px) {.u-section-1 .u-repeater-1 {grid-auto-rows: [[MD_VALUE]] !important}}"},{"mode":"SM","columns":1,"gap":22,"styles":"@media (max-width: 767px) {.u-section-1 .u-repeater-1 {grid-auto-rows: [[SM_VALUE]] !important}}"},{"mode":"XS","columns":1,"gap":22,"styles":"@media (max-width: 575px) {.u-section-1 .u-repeater-1 {grid-auto-rows: [[XS_VALUE]] !important}}"}]}--><!--/blog_options_json-->
+        
+        <div class="u-blog u-layout-horizontal u-blog-1">
+          
+          <div class="u-repeater u-repeater-1">
+            {% for i in object_list %}<!--blog_post-->
+            <div class="u-blog-post u-container-style u-gradient u-repeater-item u-repeater-item-1">
+              <div class="u-container-layout u-similar-container u-container-layout-1"><!--blog_post_image-->
+                {% if i.img %}
+                <a href="{% url 'shoot_to_root:post-detail' i.id %}"><img alt="" class="u-blog-control u-expanded-width u-image u-image-default u-image-1" src="{{i.img.url}}" data-image-width="328" data-image-height="154"></a>
+                {% endif %}<!--/blog_post_image--><!--blog_post_header-->
+                <h4 class="u-blog-control u-text u-text-2">
+                  <a href="{% url 'shoot_to_root:post-detail' i.id %}" class="u-post-header-link" href="#"><!--blog_post_header_content-->{{i.title}}<!--/blog_post_header_content--></a>
+                </h4><!--/blog_post_header--><!--blog_post_content-->
+                <div class="u-blog-control u-post-content u-text u-text-3"><!--blog_post_content_content-->{{i.description}}<!--/blog_post_content_content--></div><!--/blog_post_content--><!--blog_post_readmore-->
+                <div class="u-blog-control u-post-content u-text u-text-3"><!--blog_post_content_content--><p><small class="text-muted">Last updated {{i.timestamp}}</small></p><!--/blog_post_content_content--></div><!--/blog_post_content--><!--blog_post_readmore-->
+                <a href="{% url 'shoot_to_root:post-detail' i.id %}" class="u-blog-control u-border-2 u-border-palette-1-base u-btn u-btn-rectangle u-button-style u-none u-btn-1"><!--blog_post_readmore_content-->Read More<!--/blog_post_readmore_content--></a><!--/blog_post_readmore-->
+              </div>
+              
+            </div>{% endfor %}<!--/blog_post--><!--blog_post-->
+          </div>
+          <a class="u-absolute-vcenter u-gallery-nav u-gallery-nav-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-gallery-nav-1" href="#" role="button">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+          </a>
+          <a class="u-absolute-vcenter u-gallery-nav u-gallery-nav-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-gallery-nav-2" href="#" role="button">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+          </a>
+        </div><!--/blog-->
+      </div>
+    </section>
 {% endblock %}

@@ -12,16 +12,18 @@ class PostDetail(DetailView):
 class CTFList(ListView):
 	model=CTF
 
-	def __init__(self):
-		model1=CTF.objects.get(id=1)
-		model1.index=1
-		model1.save()
+	# def __init__(self):
+	# 	model1=CTF.objects.get(id=1)
+	# 	model1.index=1
+	# 	model1.save()
 
 class CTFDetail(DetailView):
 	model=CTF
 
 def home(request):
 	return render(request,'base.html')
+def about(request):
+	return render(request,'about.html')
 
 def comment(request):
 	if request.method=="POST":
@@ -34,15 +36,17 @@ def contact(request):
 	if request.method=="POST":
 		name=request.POST["nm"]
 		email=request.POST["em"]
-		phone=request.POST["phoneno"]
+		#phone=request.POST["phoneno"]
 		comment=request.POST["comment"]
-		contacts=Contact(name=name,email=email,phone=phone,comment=comment)
+		contacts=Contact(name=name,email=email,comment=comment)
 		contacts.save()
 	return redirect(request.META['HTTP_REFERER'])
 
 def flag(request):
 	if request.method=="POST":
 		flag_submit=request.POST["flag"]
+		index=request.POST["index"]
+		category=request.POST["cate"]
 		flag_obj=CTF.objects.get(id=1)
 		real_flag=flag_obj.flag
 		if real_flag==flag_submit:

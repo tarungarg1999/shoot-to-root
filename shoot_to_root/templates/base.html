@@ -1,229 +1,287 @@
 {% load static %}
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>shoot-to-root</title>
-  <link rel = "icon" href="{% static '/img/logo1.png' %}"
-        type = "image/x-icon"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-	<script src="{% static 'js/script.js' %}" type="text/javascript"></script>
-</head>
-<body>
-	<noscript>   
-        <div class="color-red medium-text padding-bottom-35 clearfix">
-          This website requires JavaScript. Please enable JavaScript in your
-          browser.
-        </div>
-      </noscript>
-    <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: white">
-  <a class="navbar-brand" href="#" ><img class="logo-navbar" src="{% static '/img/logo2.png' %}" height="150" width="250" ></a>
-    <button 
-      class="navbar-toggler" 
-      type="button" 
-      data-toggle="collapse" 
-      data-target="#navbarSupportedContent" 
-      aria-controls="navbarSupportedContent" 
-      aria-expanded="false" 
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/blogs.html">Blogs</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Services
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/ctfs.html">CTFs</a>
-          <a class="dropdown-item" href="#">Training</a>
-          <div class="dropdown-divider"></div>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<!--Navbar-->
-<!--Carousel-->
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="view w-100">
-                    <img class="d-block w-100" src="{% static '/img/5.jpg' %}" alt="First slide" height="620vh">
-                </div>
-                <div class="carousel-caption">
-
-                    <h1>shoot-to-root</h1>
-                    <h3 class="path-to-root"># Path way to root</h3>
-
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="view w-100">
-                    <img class="d-block w-100" src="{% static '/img/7.jpg' %}" alt="Second slide" height="620vh">
-                </div>
-                <div class="carousel-caption ">
-
-                    <h1>shoot-to-root</h1>
-                    <h3 class="path-to-root"># Path way to root</h3>
-
-
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-    <!--Carousel ends-->
-<div class="container">
-</div><br><br>
-<!--Contact Us-->
-<a name="contact"></a>
-  <section class="home-section-new">
-    <center>
-    <h3 class="vision-heading">CONTACT US</h3></center>
-    <br>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="About me">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Shoot-to-root</title>
+    <link rel="stylesheet" href="{% static '/css/nicepagebase.css' %}" media="screen">
+<link rel="stylesheet" href="{% static '/css/Shoot-to-root.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static '/js/jquery-1.9.1.minbase.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static '/js/nicepagebase.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 3.15.1, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|Alatsi:400">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i">
     
-      <div class="row">
-        <div class="col-md-2 col-lg-3">
-            </div>
-        <div class="col-12 mx-2 col-md-8 col-lg-6">
-          <form action="contact" class="contact-form" method="post">
-            {% csrf_token %}
-        
-            <div class="form-group">
-              <input type="text" class="form-control" id="name" name="nm" placeholder="Name" required="">
-            </div>
-            
-            
-            <div class="form-group form_left">
-              <input type="email" class="form-control" id="email" name="em" placeholder="Email" required="">
-            </div>
-            
-            <div class="form-group">
-               <input type="text" class="form-control" id="phone" name="phoneno" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" placeholder="Mobile No." required="">
-            </div>
-            <div class="form-group">
-              <textarea class="form-control textarea-contact" rows="5" id="comment" name="comment" placeholder="Type Your Message/Feedback here..." required=""></textarea>
-              <br>
-               <button class="btn btn-default btn-send"> <i class="fa fa-send"></i> &nbsp; Send </button>
-               
-            </div>
-          </form>  
+    
+    
+    
+    <script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "",
+    "url": "index.html",
+    "logo": "{% static '/img/logo2.png' %}",
+    "sameAs": []
+}</script>
+    <meta property="og:title" content="Shoot-to-root">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#3a66ec">
+    <link rel="canonical" href="index.html">
+    <meta property="og:url" content="index.html">
+  </head>
+  <body class="u-body"><header class="u-align-center-xs u-border-1 u-border-grey-25 u-clearfix u-header u-header" id="sec-bae1"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+        <a href="#" class="u-image u-logo u-image-1" data-image-width="481" data-image-height="291">
+          <img src="{% static '/img/logo2.png' %}" class="u-logo-image u-logo-image-1" data-image-width="223.836">
+        </a>
+        <form action="#" method="get" class="u-border-1 u-border-grey-15 u-search u-search-right u-search-1">
+          <button class="u-search-button" type="submit">
+            <span class="u-search-icon u-spacing-10 u-text-grey-40">
+              <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 56.966 56.966" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-b04b"></use></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-b04b" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" class="u-svg-content"><path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"></path><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+            </span>
+          </button>
+          <input class="u-search-input u-search-input-1" type="search" name="search" value="" placeholder="Search">
+        </form>
+        <nav class="u-align-left u-menu u-menu-dropdown u-nav-spacing-25 u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1.125rem; font-weight: 700;">
+            <a class="u-button-style u-nav-link" href="#" style="padding: 4px 8px; font-size: calc(1em + 8px);">
+              <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 302 302" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-732a"></use></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-732a" x="0px" y="0px" viewBox="0 0 302 302" style="enable-background:new 0 0 302 302;" xml:space="preserve" class="u-svg-content"><g><rect y="36" width="302" height="30"></rect><rect y="236" width="302" height="30"></rect><rect y="136" width="302" height="30"></rect>
+</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+            </a>
           </div>
-          <div class="col-md-2 col-lg-3">
-      </div>
-    </div>
-  </section>
-  <!-- Contact Us-->
-<!--Footer-->
-  <footer class="section-footer footer-classic context-dark bg-image">
-        <div class="">
-          <div class="row ">
-            <div class="col-6 col-md-3 col-xl-3">
-        <div class="pr-xl-4">
-          <h4 class="footer-heading">shoot-to-root</h4>
-        <div class="footer-about-content">
-                <!-- Rights-->
-        <h6><p class="path-to-root">#Path way to root</p></h6>
-      </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-grey-5 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="/base.html" style="padding: 16px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="#" style="padding: 16px 20px;">Our Services</a>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="/blogs.html" style="padding: 16px 20px;">Blog</a>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="/ctfs.html" style="padding: 16px 20px;">CTFs</a>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="/about.html" style="padding: 16px 20px;">About</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-align-center u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 16px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 16px 20px;">Our Services</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/blogs.html" style="padding: 16px 20px;">Blog</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/ctfs.html" style="padding: 16px 20px;">CTFs</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/about.html" style="padding: 16px 20px;">About</a>
+</li></ul>
               </div>
             </div>
-            <div class="col-6 col-md-3 col-xl-3">
-              <div class="pr-xl-4">
-              <h5 class="footer-heading">Contacts</h5>
-              <dl class="contact-list">
-                <h6><dt>Email:</dt></h6>
-                <dd><a href="mailto:#" class="footer-link">&nbsp;rg12101999@gmail.com</a></dd>
-              </dl>
-              <dl class="contact-list">
-                <dt>Phones:</dt>
-                <dd>&nbsp;(+91)-9802890059
-                </dd>
-              </dl></div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-align-center u-clearfix u-valign-middle-sm u-valign-middle-xs u-section-1" id="carousel_d9ee">
+      <div id="carousel-bd35" data-interval="5000" data-u-ride="carousel" class="u-carousel u-expanded-width u-slider u-slider-1">
+        <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+          <li data-u-target="#carousel-bd35" class="u-active u-active-grey-25 u-shape-circle u-white" data-u-slide-to="0" style="width: 10px; height: 10px;"></li>
+          <li data-u-target="#carousel-bd35" class="u-active-grey-25 u-shape-circle u-white" data-u-slide-to="1" style="width: 10px; height: 10px;"></li>
+        </ol>
+        <div class="u-carousel-inner" role="listbox">
+          <div class="u-active u-align-center u-carousel-item u-container-style u-image u-shading u-slide u-image-1" data-image-width="626" data-image-height="417">
+            <div class="u-container-layout u-valign-middle u-container-layout-1">
+              <div class="u-container-style u-group u-shape-rectangle u-group-1" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Up">
+                <div class="u-container-layout u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xl u-container-layout-2">
+                  <h2 class="u-align-center u-text u-text-body-alt-color u-text-1">SHOOT-To-ROOT</h2>
+                  <p class="u-align-center u-text u-text-2">Achieve your pathway to root</p>
+                  <a href="#features" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-palette-2-base u-radius-50 u-btn-1">Learn More</a>
+                </div>
+              </div>
             </div>
-            <div class="col-6 col-md-3 col-xl-3">
-              <div class="pr-xl-4">
-              <h5 class="footer-heading">Services</h5>
-              <ul class="nav-list">
-                <li><a href="/blogs.html" class="footer-link">&nbsp;Blogs</a></li>
-                <li><a href="/ctfs.html" class="footer-link">&nbsp;CTFs</a></li>
-               
-              </ul>
-            </div>
-            </div>
-            <div class="col-6 col-md-3 col-xl-3">
-              <div class="pr-xl-4">
-              <h5 class="footer-heading">Get in Touch</h5>
-              <ul class="nav-list">
-                 <li><a href="#" class="footer-link">&nbsp;About</a></li>
-                <li><a href="#contact" class="footer-link">&nbsp;Contact Us</a></li>
-              </ul></div>
+          </div>
+          <div class="u-align-center u-carousel-item u-container-style u-expanded-width u-image u-shading u-slide u-image-2" data-image-width="600" data-image-height="345">
+            <div class="u-container-layout u-valign-middle u-container-layout-3">
+              <div class="u-container-style u-group u-shape-rectangle u-group-2" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="1000" data-animation-direction="Up">
+                <div class="u-container-layout u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xl u-container-layout-4">
+                  <h2 class="u-align-center u-text u-text-body-alt-color u-text-3">SHOOT-TO-ROOT</h2>
+                  <p class="u-align-center u-text u-text-4">Achieve your pathway to root</p>
+                  <a href="#features" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-palette-2-base u-radius-50 u-btn-2">Learn More</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="row no-gutters social-container">
-          <div class="col-3">
-        <a class="social-inner footer-link" href="https://www.facebook.com/tg106e/">
-        <i class="fa fa-facebook" aria-hidden="true"></i> <br>&nbsp;Facebook
-        <br>
+        <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-spacing-12 u-text-body-alt-color u-carousel-control-1" href="#carousel-bd35" role="button" data-u-slide="prev">
+          <span aria-hidden="true">
+            <svg viewBox="0 0 8 8"><path d="M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z"></path></svg>
+          </span>
+          <span class="sr-only">
+            <svg viewBox="0 0 8 8"><path d="M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z"></path></svg>
+          </span>
+        </a>
+        <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-spacing-12 u-text-body-alt-color u-carousel-control-2" href="#carousel-bd35" role="button" data-u-slide="next">
+          <span aria-hidden="true">
+            <svg viewBox="0 0 8 8"><path d="M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z"></path></svg>
+          </span>
+          <span class="sr-only">
+            <svg viewBox="0 0 8 8"><path d="M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z"></path></svg>
+          </span>
         </a>
       </div>
-      <div class="col-3">
-      <a class="social-inner footer-link" href="https://www.linkedin.com/in/tarun-garg-892807165/">
-        <i class="fa fa-linkedin" aria-hidden="true"></i> <br>&nbsp;Linked-in
-        <br>
+    </section>
+    <a name="features"></a>
+    <section class="u-align-center u-clearfix u-grey-10 u-section-2" src="" id="sec-2976">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-1">Features</h1>
+        <p class="u-text u-text-2">Feel free to utilize our features</p>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-1">
+              <div class="u-container-layout u-similar-container u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-container-layout-1"><span class="u-icon u-icon-circle u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 480.027 480.027" style=""><use xlink:href="#svg-64b0"></use></svg><svg class="u-svg-content" viewBox="0 0 480.027 480.027" id="svg-64b0"><path d="m478.87 335.674c-.21-4.26-3.725-7.607-7.99-7.607h-22.88v16h15.264l.745 15.171c.429 8.855-6.401 16.381-15.256 16.81-.251.012-.502.018-.753.019v16c17.701-.013 32.04-14.374 32.027-32.075 0-.506-.013-1.012-.037-1.518z"></path><path d="m16 360.067v-16h136v-16h-104v-216c.015-13.248 10.752-23.985 24-24v224h16v-272c.015-13.248 10.752-23.985 24-24h256c13.248.015 23.985 10.752 24 24v144h16v-96c13.248.015 23.985 10.752 24 24v120h16v-120c-.025-22.081-17.919-39.975-40-40v-32c-.025-22.081-17.919-39.975-40-40h-256c-22.081.025-39.975 17.919-40 40v32c-22.081.025-39.975 17.919-40 40v216h-24c-4.418 0-8 3.582-8 8v24c.02 17.665 14.335 31.98 32 32h144v-16h-144c-8.832-.01-15.99-7.168-16-16z"></path><path d="m304 200.067c-57.438.005-103.996 46.571-103.992 104.008.005 57.438 46.571 103.996 104.008 103.992 54.332-.004 99.504-41.829 103.684-96h.3v-8c-.065-57.411-46.589-103.935-104-104zm0 192c-48.601 0-88-39.399-88-88s39.399-88 88-88 88 39.399 88 88c-.055 48.578-39.422 87.945-88 88z"></path><path d="m104 32.067h16v16h-16z"></path><path d="m136 32.067h16v16h-16z"></path><path d="m168 32.067h16v16h-16z"></path><path d="m104 64.067h272v16h-272z"></path><path d="m419.321 376.074c13.539-21.575 20.708-46.536 20.679-72.007 0-74.99-61.01-136-136-136s-136 61.01-136 136 61.01 136 136 136c25.471.029 50.432-7.14 72.007-20.679l51.709 51.709c12.02 11.901 31.413 11.805 43.314-.216 11.817-11.936 11.817-31.162 0-43.098zm-115.321 47.993c-66.274 0-120-53.726-120-120s53.726-120 120-120 120 53.726 120 120c-.075 66.243-53.757 119.925-120 120zm145.373 40c-3.882.011-7.606-1.532-10.343-4.284l-49.811-49.816c7.611-6.137 14.544-13.07 20.681-20.681l49.812 49.811c5.712 5.712 5.712 14.973 0 20.686-2.742 2.742-6.461 4.283-10.339 4.284z"></path><path d="m344 296.067v-8c.006-22.091-17.897-40.005-39.989-40.011-14.297-.004-27.509 7.623-34.655 20.005l13.85 8.012c6.618-11.484 21.294-15.429 32.778-8.81 7.438 4.287 12.02 12.219 12.016 20.804v8h-64c-4.418 0-8 3.582-8 8v48c0 4.418 3.582 8 8 8h80c4.418 0 8-3.582 8-8v-48c0-4.418-3.582-8-8-8zm-8 48h-64v-32h64z"></path><path d="m152 144.067v-16c0-13.255-10.745-24-24-24s-24 10.745-24 24v16c0 13.255 10.745 24 24 24s24-10.745 24-24zm-32 0v-16c0-4.418 3.582-8 8-8s8 3.582 8 8v16c0 4.418-3.582 8-8 8s-8-3.582-8-8z"></path><path d="m200 128.067v16c0 13.255 10.745 24 24 24s24-10.745 24-24v-16c0-13.255-10.745-24-24-24s-24 10.745-24 24zm32 0v16c0 4.418-3.582 8-8 8s-8-3.582-8-8v-16c0-4.418 3.582-8 8-8s8 3.582 8 8z"></path><path d="m326.935 148.061 13.847 8.016c2.109-3.651 3.219-7.793 3.218-12.01v-16c0-13.255-10.745-24-24-24s-24 10.745-24 24v16c-.001 4.216 1.109 8.359 3.217 12.01l13.849-8.01c-.706-1.214-1.074-2.595-1.066-4v-16c0-4.418 3.582-8 8-8s8 3.582 8 8v16c.007 1.402-.36 2.781-1.065 3.994z"></path><path d="m168 112.067h16v48h-16z"></path><path d="m264 112.067h16v48h-16z"></path><path d="m112 184.067h16v48h-16z"></path><path d="m144 184.067h16v48h-16z"></path><path d="m104 288.067c0 13.255 10.745 24 24 24s24-10.745 24-24v-16c0-13.255-10.745-24-24-24s-24 10.745-24 24zm16-16c0-4.418 3.582-8 8-8s8 3.582 8 8v16c0 4.418-3.582 8-8 8s-8-3.582-8-8z"></path><path d="m360 112.067h16v48h-16z"></path></svg>
+            
+            
+          </span>
+                <a href="#" style="color: black"> <h4 class="u-align-center-lg u-align-center-md u-align-center-xl u-text u-text-3">Vulnerability Testing</h4></a>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-2">
+              <div class="u-container-layout u-similar-container u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-container-layout-2"><span class="u-icon u-icon-circle u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 24 24" style=""><use xlink:href="#svg-5d1f"></use></svg><svg class="u-svg-content" viewBox="0 0 24 24" id="svg-5d1f"><g><path d="m7.323 10.5h-2.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h2.5c.414 0 .75.336.75.75s-.336.75-.75.75z"></path>
+</g><g><path d="m19.323 10.5h-7.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h7.5c.414 0 .75.336.75.75s-.336.75-.75.75z"></path>
+</g><g><path d="m7.323 14.5h-2.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h2.5c.414 0 .75.336.75.75s-.336.75-.75.75z"></path>
+</g><g><path d="m19.323 14.5h-7.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h7.5c.414 0 .75.336.75.75s-.336.75-.75.75z"></path>
+</g><g><path d="m7.323 18.5h-2.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h2.5c.414 0 .75.336.75.75s-.336.75-.75.75z"></path>
+</g><g><path d="m19.323 18.5h-7.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h7.5c.414 0 .75.336.75.75s-.336.75-.75.75z"></path>
+</g><g><path d="m21.25 23h-18.5c-1.517 0-2.75-1.233-2.75-2.75v-16.5c0-1.517 1.233-2.75 2.75-2.75h18.5c1.517 0 2.75 1.233 2.75 2.75v16.5c0 1.517-1.233 2.75-2.75 2.75zm-18.5-20.5c-.689 0-1.25.561-1.25 1.25v16.5c0 .689.561 1.25 1.25 1.25h18.5c.689 0 1.25-.561 1.25-1.25v-16.5c0-.689-.561-1.25-1.25-1.25z"></path>
+</g><g><path d="m23.25 6h-22.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h22.5c.414 0 .75.336.75.75s-.336.75-.75.75z"></path>
+</g></svg>
+            
+            
+          </span>
+                <a href="/blogs.html" style="color: black"> <h4 class="u-text u-text-4">Blogs</h4></a>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-3">
+              <div class="u-container-layout u-similar-container u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-container-layout-3"><span class="u-icon u-icon-circle u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512.177 512.177" style=""><use xlink:href="#svg-2d92"></use></svg><svg class="u-svg-content" viewBox="0 0 512.177 512.177" id="svg-2d92"><path d="m181.943 512.177c-16.702 0-33.301-3.224-48.938-9.583l-64.352-26.17c-41.649-16.937-68.561-56.934-68.561-101.896v-291.379c-.802-58.002 60.853-99.474 114.267-76.885.047.019.095.039.142.058l57.564 23.925 134.556-27.998c.175-.037.351-.071.527-.103 24.274-4.375 49.183-1.776 72.031 7.516l64.351 26.169c41.65 16.938 68.562 56.935 68.562 101.896v291.294c0 27.672-13.707 53.415-36.665 68.863-22.958 15.447-51.969 18.447-77.602 8.022-.047-.019-.095-.039-.142-.058l-57.559-23.922-134.551 28.078c-.179.038-.358.072-.538.105-7.661 1.382-15.387 2.068-23.092 2.068zm-98.987-472.105c-8.346 0-16.578 2.495-23.868 7.401-12.072 8.123-18.995 21.126-18.995 35.676v291.379c0 28.612 17.126 54.065 43.63 64.844l64.352 26.169c15.739 6.4 32.888 8.214 49.612 5.249l140.32-29.282c3.94-.823 8.042-.437 11.761 1.11l63.192 26.264c13.46 5.449 28.085 3.926 40.137-4.184 12.072-8.123 18.995-21.126 18.995-35.676v-291.294c0-28.612-17.126-54.064-43.63-64.843l-64.352-26.169c-15.739-6.401-32.888-8.214-49.616-5.249l-140.327 29.199c-3.939.821-8.034.433-11.75-1.112l-63.193-26.264c-5.317-2.153-10.818-3.218-16.268-3.218zm57.136 358.099c13.807 0 25-11.193 25-25-1.317-33.162-48.688-33.153-50 0 0 13.807 11.193 25 25 25zm0-90c13.807 0 25-11.193 25-25-1.317-33.162-48.688-33.153-50 0 0 13.807 11.193 25 25 25zm89 90c13.807 0 25-11.193 25-25-1.317-33.162-48.688-33.153-50 0 0 13.807 11.193 25 25 25zm89 0c13.807 0 25-11.193 25-25-1.317-33.162-48.688-33.153-50 0 0 13.807 11.193 25 25 25zm0-90c13.807 0 25-11.193 25-25-1.317-33.162-48.688-33.153-50 0 0 13.807 11.193 25 25 25zm0-90c13.807 0 25-11.193 25-25-1.317-33.162-48.688-33.153-50 0 0 13.807 11.193 25 25 25zm89 0c13.807 0 25-11.193 25-25-1.317-33.162-48.688-33.153-50 0 0 13.807 11.193 25 25 25zm-238.715-45 25.858-25.858c18.017-19.511-8.795-46.294-28.284-28.284l-25.858 25.858-25.858-25.858c-19.511-18.017-46.294 8.795-28.284 28.284l25.858 25.858-25.859 25.858c-7.811 7.811-7.811 20.474 0 28.284 7.81 7.811 20.474 7.811 28.284 0l25.858-25.858 25.858 25.858c7.81 7.811 20.474 7.811 28.284 0 7.811-7.811 7.811-20.474 0-28.284z"></path></svg>
+            
+            
+          </span>
+                <a href="/ctfs.html" style="color: black"> <h4 class="u-text u-text-5">Capture the Flag</h4></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#contact" class="u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-1">CONTACT US<br>
         </a>
       </div>
-      <div class="col-3">
-        <a class="social-inner footer-link" href="https://twitter.com/raja_garg">
-        <i class="fa fa-twitter" aria-hidden="true"></i> <br>&nbsp;Twitter
-        <br>
-        </a>
+    </section>
+    <a name="contact"></a>
+    <section class="u-clearfix u-palette-4-dark-3 u-section-3" id="carousel_b8d1">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <h5 class="u-text u-text-1">Ready to talk?</h5>
+                  <h2 class="u-text u-text-2">Contact Me</h2>
+                  <p class="u-text u-text-3">Feel free to contact me if you have any queries or interesting projects for me.</p>
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-valign-top u-container-layout-2">
+                  <div class="u-expanded-width u-form u-form-1">
+                    <form action="contact" method="POST" class="u-block-1f41-12 u-clearfix u-form-spacing-15 u-form-vertical u-inner-form"><!-- hidden inputs for siteId and pageId -->
+                      {% csrf_token %}
+                      <div class="u-form-group u-form-name">
+                        <label for="name-f798" class="u-form-control-hidden u-label">Name</label>
+                        <input type="text" placeholder="Enter your Name" id="name-f798" name="nm" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle" required="">
+                      </div><!-- always visible -->
+                      <div class="u-form-email u-form-group">
+                        <label for="email-f798" class="u-form-control-hidden u-label">Email</label>
+                        <input type="email" placeholder="Enter a valid email address" id="email-f798" name="em" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle" required="">
+                      </div>
+                      <div class="u-form-group u-form-message">
+                        <label for="message-f798" class="u-form-control-hidden u-label">Message</label>
+                        <textarea placeholder="Enter your message" rows="4" cols="50" id="message-f798" name="comment" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle" required=""></textarea>
+                      </div>
+                      <div class="u-form-group u-form-submit">
+                        <a href="#" class="u-active-white u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-submit u-button-style u-hover-white u-none u-text-active-palette-4-base u-text-body-alt-color u-text-hover-palette-4-base u-btn-1">Submit</a>
+                        <input type="submit" value="submit" class="u-form-control-hidden">
+                      </div>
+                      <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                      <div class="u-form-send-error u-form-send-success">Unable to send your message. Please fix errors then try again. </div>
+                      <!--<div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>-->
+                      <input type="hidden" value="" name="recaptchaResponse">
+                    </form>
+                  </div>
+                  <div class="u-social-icons u-spacing-10 u-social-icons-1">
+                    <a class="u-social-url" target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/tarun-garg-892807165/"><span class="u-icon u-icon-circle u-social-icon u-social-linkedin u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-1805"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-1805"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M41.3,83.7H27.9V43.4h13.4V83.7z M34.6,37.9L34.6,37.9c-4.6,0-7.5-3.1-7.5-7c0-4,3-7,7.6-7s7.4,3,7.5,7
+            C42.2,34.8,39.2,37.9,34.6,37.9z M89.6,83.7H76.2V62.2c0-5.4-1.9-9.1-6.8-9.1c-3.7,0-5.9,2.5-6.9,4.9c-0.4,0.9-0.4,2.1-0.4,3.3v22.5
+            H48.7c0,0,0.2-36.5,0-40.3h13.4v5.7c1.8-2.7,5-6.7,12.1-6.7c8.8,0,15.4,5.8,15.4,18.1V83.7z"></path></svg></span>
+                    </a>
+                    <a class="u-social-url" target="_blank" title="Github" href="https://github.com/tarungarg1999"><span class="u-icon u-icon-circle u-social-github u-social-icon u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-7b65"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-7b65"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M88,51.3c0-5.5-1.9-10.2-5.3-13.7c0.6-1.3,2.3-6.5-0.5-13.5c0,0-4.2-1.4-14,5.3c-4.1-1.1-8.4-1.7-12.7-1.8
+  c-4.3,0-8.7,0.6-12.7,1.8c-9.7-6.6-14-5.3-14-5.3c-2.8,7-1,12.2-0.5,13.5C25,41.2,23,45.7,23,51.3c0,19.6,11.9,23.9,23.3,25.2
+  c-1.5,1.3-2.8,3.5-3.2,6.8c-3,1.3-10.2,3.6-14.9-4.3c0,0-2.7-4.9-7.8-5.3c0,0-5-0.1-0.4,3.1c0,0,3.3,1.6,5.6,7.5c0,0,3,9.1,17.2,6
+  c0,4.3,0.1,8.3,0.1,9.5h25.2c0-1.7,0.1-7.2,0.1-14c0-4.7-1.7-7.9-3.4-9.4C76,75.2,88,70.9,88,51.3z"></path></svg></span>
+                    </a>
+                    <a class="u-social-url" target="_blank" href="https://twitter.com/raja_garg" title="Twitter"><span class="u-icon u-icon-circle u-social-icon u-social-twitter u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xlink:href="#svg-3497"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-3497" style="enable-background:new 0 0 512 512;"><path style="fill:currentColor;" d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016  c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992  c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056  c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152  c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792  c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44  C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568  C480.224,136.96,497.728,118.496,512,97.248z"></path></svg></span>
+                    </a>
+                    <a class="u-social-url" target="_blank" href="https://www.facebook.com/tg106e/" title="Facebook"><span class="u-icon u-icon-circle u-social-facebook u-social-icon u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xlink:href="#svg-0dad"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-0dad" style="enable-background:new 0 0 512 512;"><path style="fill:#1976D2;" d="M448,0H64C28.704,0,0,28.704,0,64v384c0,35.296,28.704,64,64,64h384c35.296,0,64-28.704,64-64V64  C512,28.704,483.296,0,448,0z"></path><path style="fill:#FAFAFA;" d="M432,256h-80v-64c0-17.664,14.336-16,32-16h32V96h-64l0,0c-53.024,0-96,42.976-96,96v64h-64v80h64  v176h96V336h48L432,256z"></path></svg></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-3">
-        <a class="social-inner footer-link" href="https://github.com/tarungarg1999">
-        <i class="fa fa-github" aria-hidden="true"></i> <br>&nbsp;Github
-        <br>
-        </a>
-      </div>
-    </div>
-  </footer>
-  <!--Footer-->
-
-</body>
+    </section>
+    
+    
+    <footer class="u-align-center-md u-align-center-sm u-align-center-xs u-clearfix u-footer u-grey-80" id="sec-d13a"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-align-center-lg u-align-center-md u-align-center-xl u-custom-font u-heading-font u-text u-text-1">
+          <span style="font-size: 1.875rem;">Services<br>
+          </span>
+          <a href="/blogs.html" class="footer-link u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-white u-btn-1">&nbsp;Blogs</a>
+          <br>
+          <a href="/ctfs.html" class="footer-link u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-white u-btn-2">&nbsp;CTFs</a>
+        </p>
+        <p class="u-align-center-lg u-align-center-md u-align-center-xl u-custom-font u-heading-font u-text u-text-2">shoot-to-root</p>
+        <p class="u-align-center-lg u-align-center-md u-align-center-xl u-custom-font u-heading-font u-text u-text-3">
+          <span style="font-size: 1.875rem;">Contacts</span>
+          <br>Email:<a href="mailto:rg12101999@gmail.com" class="footer-link u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-white u-btn-3">&nbsp;rg12101999@gmail.com</a>
+          <br>Phones:&nbsp;(+91)-9802890059
+        </p>
+        <p class="u-align-center-lg u-align-center-md u-align-center-xl u-custom-font u-heading-font u-text u-text-4">
+          <span style="font-size: 1.875rem;">Get in Touch</span>
+          <br>
+          <a href="/about.html" class="footer-link u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-white u-btn-4">&nbsp;About</a>
+          <br>
+          <a href="#contact" class="footer-link u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-white u-btn-5">&nbsp;Contact Us</a>
+        </p>
+        <p class="u-align-center-lg u-align-center-md u-align-center-xl u-text u-text-5">#Path way to root</p>
+        <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
+          <a class="u-social-url" title="facebook" target="_blank" href="https://www.facebook.com/tg106e/"><span class="u-icon u-icon-circle u-social-facebook u-social-icon u-text-white u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xlink:href="#svg-c631"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-c631"><path d="m75 512h167v-182h-60v-60h60v-75c0-41.355469 33.644531-75 75-75h75v60h-60c-16.542969 0-30 13.457031-30 30v60h87.292969l-10 60h-77.292969v182h135c41.355469 0 75-33.644531 75-75v-362c0-41.355469-33.644531-75-75-75h-362c-41.355469 0-75 33.644531-75 75v362c0 41.355469 33.644531 75 75 75zm-45-437c0-24.8125 20.1875-45 45-45h362c24.8125 0 45 20.1875 45 45v362c0 24.8125-20.1875 45-45 45h-105v-122h72.707031l20-120h-92.707031v-30h90v-120h-105c-57.898438 0-105 47.101562-105 105v45h-60v120h60v122h-137c-24.8125 0-45-20.1875-45-45zm0 0"></path></svg></span>
+          </a>
+          <a class="u-social-url" title="twitter" target="_blank" href="https://twitter.com/raja_garg"><span class="u-icon u-icon-circle u-social-icon u-social-twitter u-text-white u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 511.271 511.271" style=""><use xlink:href="#svg-5b73"></use></svg><svg class="u-svg-content" viewBox="0 0 511.271 511.271" x="0px" y="0px" id="svg-5b73" style="enable-background:new 0 0 511.271 511.271;"><g><g><path d="M508.342,94.243c-2.603-2.603-6.942-3.471-10.414-2.603l-17.356,6.075c10.414-12.149,17.356-25.166,21.695-37.315    c1.736-4.339,0.868-7.81-1.736-10.414c-2.603-2.603-6.942-3.471-10.414-1.736c-24.298,10.414-45.125,19.092-62.481,24.298    c0,0.868-0.868,0-1.736,0c-13.885-7.81-47.729-25.166-72.027-25.166c-61.614,0.868-111.078,52.936-111.078,116.285v3.471    c-90.251-17.356-139.715-43.39-193.519-99.797L40.6,58.663l-5.207,10.414c-29.505,56.407-8.678,107.607,25.166,142.319    c-15.62-2.603-26.034-7.81-35.58-15.62c-3.471-2.603-7.81-3.471-12.149-0.868c-3.471,1.736-5.207,6.942-4.339,11.281    c12.149,40.786,42.522,73.763,75.498,93.722c-15.62,0-28.637-1.736-41.654-10.414c-3.471-1.736-8.678-1.736-12.149,0.868    s-5.207,6.942-3.471,11.281c15.62,44.258,45.993,67.688,94.59,73.763c-25.166,14.753-58.142,26.902-109.342,27.77    c-5.207,0-9.546,3.471-11.281,7.81c-1.736,5.207,0,9.546,3.471,13.017c31.241,25.166,100.664,39.919,186.576,39.919    c152.732,0,277.695-136.244,277.695-303.729v-2.603c19.092-9.546,34.712-27.77,42.522-52.936    C511.813,101.185,510.945,96.846,508.342,94.243z M456.274,143.707l-5.207,1.736v14.753    c0,157.939-117.153,286.373-260.339,286.373c-78.97,0-131.905-13.017-160.542-26.902c59.878-4.339,94.59-23.431,121.492-44.258    l21.695-15.62h-26.034c-49.464,0-79.837-13.885-97.193-46.861c15.62,5.207,32.108,5.207,50.332,4.339    c6.942-0.868,13.885-0.868,20.827-0.868l2.603-17.356c-32.976-9.546-72.027-39.051-91.119-78.969    c17.356,7.81,36.447,9.546,53.803,9.546h26.902L91.8,213.999c-18.224-13.017-72.027-59.01-45.993-124.963    c55.539,54.671,108.475,79.837,203.932,97.193l10.414,1.736v-24.298c0-53.803,41.654-98.061,93.722-98.929    c19.959-0.868,52.936,17.356,62.481,22.563c5.207,2.603,10.414,3.471,15.62,1.736c13.017-4.339,28.637-10.414,45.993-17.356    c-7.81,13.017-18.224,25.166-32.108,36.448c-3.471,2.603-4.339,7.81-2.603,12.149c1.736,4.339,6.942,6.075,11.281,4.339    l33.844-11.281C482.308,124.616,472.762,137.633,456.274,143.707z"></path>
+</g>
+</g></svg></span>
+          </a>
+          <a class="u-social-url" title="linkedin" target="_blank" href="https://www.linkedin.com/in/tarun-garg-892807165/"><span class="u-icon u-icon-circle u-social-icon u-social-linkedin u-text-white u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xlink:href="#svg-06f3"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-06f3" style="enable-background:new 0 0 512 512;"><g transform="translate(1)"><g><g><path d="M68.12,4.267c-18.773,0-35.84,6.827-48.64,19.627C5.827,37.547-1,54.613-1,72.533c0,18.773,7.68,35.84,20.48,48.64     c12.8,12.8,30.72,20.48,47.787,19.627c0,0,0.853,0,1.707,0c17.067,0,33.28-6.827,46.08-19.627     c12.8-12.8,20.48-29.867,20.48-48.64c0.853-17.92-6.827-34.987-19.627-47.787C103.107,11.093,86.04,4.267,68.12,4.267z      M103.107,109.227c-9.387,9.387-22.187,15.36-35.84,14.507c-12.8,0-26.453-5.12-35.84-14.507     c-10.24-9.387-15.36-23.04-15.36-36.693s5.12-26.453,15.36-36.693c9.387-9.387,22.187-14.507,36.693-14.507     c12.8,0,25.6,5.12,34.987,14.507c10.24,10.24,15.36,23.04,15.36,36.693S113.347,99.84,103.107,109.227z"></path><path d="M101.4,157.867H32.28c-13.653,0-24.747,11.093-24.747,25.6v298.667c0,13.653,11.947,25.6,25.6,25.6H101.4     c13.653,0,25.6-11.947,25.6-24.747v-299.52C127,169.813,115.053,157.867,101.4,157.867z M109.933,482.987     c0,4.267-4.267,7.68-8.533,7.68H33.133c-4.267,0-8.533-4.267-8.533-8.533V183.467c0-4.267,3.413-8.533,7.68-8.533h69.12     c4.267,0,8.533,4.267,8.533,8.533V482.987z"></path><path d="M391.533,149.333h-17.92c-33.28,0-64.853,14.507-85.333,37.547v-11.947c0-8.533-8.533-17.067-17.067-17.067H185.88     c-7.68,0-17.067,6.827-17.067,16.213v318.293c0,9.387,9.387,15.36,17.067,15.36h93.867c7.68,0,17.067-5.973,17.067-15.36v-184.32     c0-28.16,20.48-50.347,46.933-50.347c13.653,0,26.453,5.12,35.84,14.507c8.533,7.68,11.947,19.627,11.947,34.987v183.467     c0,8.533,8.533,17.067,17.067,17.067h85.333c8.533,0,17.067-8.533,17.067-17.067v-220.16     C511,202.24,458.947,149.333,391.533,149.333z M493.933,489.813l-0.853,0.853h-83.627L408.6,307.2     c0-20.48-5.12-35.84-16.213-46.933c-12.8-12.8-29.867-19.627-47.787-19.627c-35.84,0.853-64,29.867-64,67.413v182.613h-93.867     V174.933h84.48l0.853,0.853v53.76l23.04-23.04l0.853-0.853c17.067-23.893,46.933-39.253,78.507-39.253h17.92     c57.173,0,101.547,46.08,101.547,104.107V489.813z"></path>
+</g>
+</g>
+</g></svg></span>
+          </a>
+          <a class="u-social-url" target="_blank" title="Github" href="https://github.com/tarungarg1999"><span class="u-icon u-icon-circle u-social-github u-social-icon u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xlink:href="#svg-6b88"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-6b88" style="enable-background:new 0 0 512 512;"><g><g><path d="M255.968,5.329C114.624,5.329,0,120.401,0,262.353c0,113.536,73.344,209.856,175.104,243.872    c12.8,2.368,17.472-5.568,17.472-12.384c0-6.112-0.224-22.272-0.352-43.712c-71.2,15.52-86.24-34.464-86.24-34.464    c-11.616-29.696-28.416-37.6-28.416-37.6c-23.264-15.936,1.728-15.616,1.728-15.616c25.696,1.824,39.2,26.496,39.2,26.496    c22.848,39.264,59.936,27.936,74.528,21.344c2.304-16.608,8.928-27.936,16.256-34.368    c-56.832-6.496-116.608-28.544-116.608-127.008c0-28.064,9.984-51.008,26.368-68.992c-2.656-6.496-11.424-32.64,2.496-68    c0,0,21.504-6.912,70.4,26.336c20.416-5.696,42.304-8.544,64.096-8.64c21.728,0.128,43.648,2.944,64.096,8.672    c48.864-33.248,70.336-26.336,70.336-26.336c13.952,35.392,5.184,61.504,2.56,68c16.416,17.984,26.304,40.928,26.304,68.992    c0,98.72-59.84,120.448-116.864,126.816c9.184,7.936,17.376,23.616,17.376,47.584c0,34.368-0.32,62.08-0.32,70.496    c0,6.88,4.608,14.88,17.6,12.352C438.72,472.145,512,375.857,512,262.353C512,120.401,397.376,5.329,255.968,5.329z"></path>
+</g>
+</g></svg></span>
+          </a>
+        </div>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" target="_blank">
+      </a>
+      <p class="u-text">
+      </p>
+      <a class="u-link"  target="_blank">
+      </a>
+    </section>
+  </body>
 </html>

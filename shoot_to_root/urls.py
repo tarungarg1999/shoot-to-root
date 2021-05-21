@@ -10,6 +10,7 @@ urlpatterns=[
 	path('comment', views.comment,name='Comment'),
 	path('flag_submit', views.flag,name='flag_submit'),
 	path('ctfs.html',CTFList.as_view(),name='ctf-list'),
+	path('about.html',views.about,name='about'),
 	path('post/<int:pk>/',PostDetail.as_view(),name='post-detail'),
 	path('ctf/<int:pk>/',CTFDetail.as_view(),name='ctf-detail'),
 	path('base.html',views.home,name='homepage'),

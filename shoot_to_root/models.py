@@ -6,6 +6,11 @@ class Contact(models.Model):
 	email=models.EmailField(max_length=50)
 	#phone=models.CharField(max_length=12)
 	comment=models.TextField(max_length=5000)
+
+class User(models.Model):
+	name=models.CharField(max_length=50)
+	key=models.CharField(max_length=50,default='')
+	point=models.IntegerField(default=0)
 	
 class Comment(models.Model):
 	comments=models.TextField(max_length=5000)

@@ -1,7 +1,9 @@
 from django.shortcuts import render,redirect,HttpResponseRedirect
 from django.http import HttpResponse,JsonResponse
 from django.views.generic import ListView,DetailView
-from shoot_to_root.models import Post,Contact,Comment,CTF,Flag
+from shoot_to_root.models import Post,Contact,Comment,CTF,Flag,User
+from django.contrib.auth.models import User as authUser
+from django.contrib import messages
 
 class PostList(ListView):
 	model=Post
@@ -11,6 +13,7 @@ class PostDetail(DetailView):
 	
 class CTFList(ListView):
 	model=CTF
+	#messages.info(,'Mr.Tarun garg')
 
 	# def __init__(self):
 	# 	model1=CTF.objects.get(id=1)
@@ -31,6 +34,24 @@ def comment(request):
 		comment_obj=Comment(comments=comment1)
 		comment_obj.save()
 	return redirect(request.META['HTTP_REFERER'])
+
+def user(request):
+	if request.method=="POST":
+		name1=request.POST["nm"]
+		password = authUser.objects.make_random_password()
+		print("user created")
+		user_obj=User(name=name1,key=password)
+		user_obj.save()
+		messages.info(request,'loooooo')
+	return redirect(request.META['HTTP_REFERER'])
+
+def userLogin(request):
+	if request.method=="POST":
+		name1=request.POST["nm"]
+		pass1=request.POST["pass"]
+		if User.objects.filter(name=name1).exists():
+			print("user existing")
+		return redirect(request.META['HTTP_REFERER'])
 
 def contact(request):
 	if request.method=="POST":

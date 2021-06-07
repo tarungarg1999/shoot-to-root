@@ -18577,6 +18577,7 @@ a.pswp__share--download:hover {
 }
 .u-dialog-close-button {
   position: absolute;
+  text-decoration: none;
   top: 20px;
   right: 20px;
   color: inherit;
@@ -18592,10 +18593,17 @@ a.pswp__share--download:hover {
   top: 0;
   left: 0;
   z-index: 100001;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: auto;
 }
+
 .u-dialog-block:not(.u-dialog-open) {
-  display: none;
+  display:none;
 }
+
 .u-accordion-link {
   font-size: inherit;
   font-family: inherit;

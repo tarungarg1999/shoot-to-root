@@ -4,6 +4,7 @@ from django.views.generic import ListView,DetailView
 from shoot_to_root.models import Post,Contact,Comment,CTF,Flag,User
 from django.contrib.auth.models import User as authUser
 from django.contrib import messages
+from . import achilles
 
 class PostList(ListView):
 	model=Post
@@ -25,6 +26,23 @@ class CTFDetail(DetailView):
 
 def home(request):
 	return render(request,'base.html')
+def Vulnerability_test(request):
+	return render(request,'Vulnerability_test.html')
+
+def vuln(request):
+	url = request.POST["url"]
+	vulnerabilities, description = achilles.basics(url)
+	if description == "":
+		return render(request, 'vuln.html', {'vulnerabilities': vulnerabilities})
+	else:
+		vulnerable = vulnerabilities.split("\n")
+		des = description.split("\n")
+		vulnerable.pop()
+		des.pop()
+		zipped_list = zip(vulnerable, des)
+		return render(request, 'vuln.html', {'vulnerable': zipped_list})
+	#return render(request,'vuln.html')
+	
 def about(request):
 	return render(request,'about.html')
 

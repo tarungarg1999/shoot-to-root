@@ -18600,9 +18600,9 @@ a.pswp__share--download:hover {
   pointer-events: auto;
 }
 
-.u-dialog-block:not(.u-dialog-open) {
+/*.u-dialog-block:not(.u-dialog-open) {
   display:none;
-}
+}*/
 
 
 .u-accordion-link {

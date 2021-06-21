@@ -11,6 +11,9 @@
     <title>CTFs</title>
     <link rel="stylesheet" href="{% static '/css/nicepagebase.css' %}" media="screen">
 <link rel="stylesheet" href="{% static '/css/CTFs.css' %}" media="screen">
+	<!--<script src="https://code.jquery.com/jquery-1.8.2.js"></script>-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script class="u-script" type="text/javascript" src="{% static '/js/jquery-1.9.1.minbase.js' %}" defer=""></script>
     <script class="u-script" type="text/javascript" src="{% static '/js/nicepagebase.js' %}" defer=""></script>
     <meta name="generator" content="Nicepage 3.15.1, nicepage.com">
@@ -81,8 +84,9 @@
     <section class="u-align-center u-clearfix u-custom-color-2 u-section-1" id="sec-a7fd">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-1">
-          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-dialog-link u-hover-none u-none u-text-black u-btn-1" href="#sec-73c3">Misc</a>
-          <!--<a class="u-dialog-link" href="#sec-73c3">Misc</a>-->
+        <h2 class="u-text u-text-1">Misc</h2>
+          <!--<a class="u-active-none u-border-none u-btn u-button-link u-button-style u-dialog-link u-hover-none u-none u-text-black u-btn-1" href="#sec-73c3">Misc</a>
+          <a class="u-dialog-link" href="#sec-73c3">Misc</a>-->
         </h2>
         <div class="u-accordion u-spacing-10 u-accordion-1">
         	{% for i in object_list %}
@@ -171,8 +175,9 @@
     <section class="u-align-center u-clearfix u-custom-color-2 u-section-1" id="sec-a7fd">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-1">
-          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-dialog-link u-hover-none u-none u-text-black u-btn-1" href="#sec-73c3">Cryptography</a>
-          <!--<a class="u-dialog-link" href="#sec-73c3">Tarun</a>-->
+        <h2 class="u-text u-text-1">Cryptography</h2>
+          <!--<a class="u-active-none u-border-none u-btn u-button-link u-button-style u-dialog-link u-hover-none u-none u-text-black u-btn-1" href="#sec-73c3">Cryptography</a>
+          <a class="u-dialog-link" href="#sec-73c3">Tarun</a>-->
         </h2>
         <div class="u-accordion u-spacing-10 u-accordion-1">
         	{% for i in object_list %}
@@ -676,16 +681,26 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
 
 
 </style>
+<!--<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>-->
+
 <script>
   
-function openPopup() {
-  window.location.hash = 'sec-73c3';
-  //window.location.href = "/ctfs.html#sec-73c3";
-  
-}
-//document.getElementsByClassName("u-dialog-link").addEventListener("onload", openPopup());
-window.onload = openPopup;
-</script>
+  //function openPopup() {
+    //window.location.hash = 'sec-73c3';
+    //window.location.href = "/ctfs.html#sec-73c3";
+    
+  //}
+  //document.getElementsByClassName("u-dialog-link").addEventListener("onload", openPopup());
+  //window.onload = openPopup;
+  $('.u-dialog-close-button').click(function(){
+  $('.u-dialog-block').hide();
+  overlay.appendTo(document.body).remove();
+  return false;
+  });
+  // document.querySelector('.u-dialog-close-button').click(function(){
+  // document.querySelector('.popup').hide();
+  // });
+  </script>
 <!--
 	window.open('#sec-73c3','u-dialog-link');
 <script>
